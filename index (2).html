@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expression Converter & Calculator</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 40px;
+      }
+      .calculator {
+        margin: 0 auto;
+        padding: 20px;
+        max-width: 500px;
+        text-align: center;
+        border: 1px solid #ddd;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      .result,
+      .input {
+        width: 90%;
+        margin: 10px;
+        padding: 10px;
+        font-size: 1.2em;
+      }
+      button {
+        margin: 5px;
+        padding: 10px 15px;
+        font-size: 1em;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="calculator">
+      <h2>Expression Converter & Calculator</h2>
+      <input
+        type="text"
+        id="expression"
+        class="input"
+        placeholder="Enter your expression (e.g., 3 + 5 * 2)"
+      />
+      <div id="output" class="result"></div>
+
+      <button onclick="convertToPostfix()">Infix to Postfix</button>
+      <button onclick="convertToPrefix()">Infix to Prefix</button>
+      <button onclick="evaluateExpression()">Evaluate Infix</button>
+      <button onclick="convertPostfixToInfix()">Postfix to Infix</button>
+      <button onclick="convertPostfixToPrefix()">Postfix to Prefix</button>
+      <button onclick="evaluatePostfix()">Evaluate Postfix</button>
+      <button onclick="convertPrefixToInfix()">Prefix to Infix</button>
+      <button onclick="convertPrefixToPostfix()">Prefix to Postfix</button>
+      <button onclick="evaluatePrefix()">Evaluate Prefix</button>
+    </div>
+
+    <script src="calculator.js"></script>
+  </body>
+</html>
